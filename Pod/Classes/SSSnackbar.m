@@ -93,7 +93,7 @@ static SSSnackbar *currentlyVisibleSnackbar = nil;
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGContextSaveGState(ctx);
     
-    [[UIColor colorWithWhite:0.1 alpha:0.9] setFill];
+    [[UIColor colorWithRed:0.0510 green:0.8235 blue:0.8353 alpha:1.0] setFill];
     UIBezierPath *clippath = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:3];
     [clippath fill];
     
@@ -241,7 +241,7 @@ static SSSnackbar *currentlyVisibleSnackbar = nil;
     if (!_hiddenVerticalLayoutConstraints) {
     
         _hiddenVerticalLayoutConstraints =
-        [NSLayoutConstraint constraintsWithVisualFormat:@"V:[self(44)]-(-50)-|"
+        [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(64)-[self(44)]"
                                                 options:0
                                                 metrics:nil
                                                   views:NSDictionaryOfVariableBindings(self)];
@@ -254,7 +254,7 @@ static SSSnackbar *currentlyVisibleSnackbar = nil;
     if (!_visibleVerticalLayoutConstraints) {
         
         _visibleVerticalLayoutConstraints =
-        [NSLayoutConstraint constraintsWithVisualFormat:@"V:[self(44)]-(5)-|"
+        [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-(64)-[self(44)]"
                                                 options:0
                                                 metrics:nil
                                                   views:NSDictionaryOfVariableBindings(self)];
